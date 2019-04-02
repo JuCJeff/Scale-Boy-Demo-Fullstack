@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Scale Boy Recipe Menu Page</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+	/>
+	<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/RLstyle.css" />
+  </head>
+  <body>
+
+    <% include nav.ejs %>
+
+    <div class="parent">
+      <h2>Saved Recipes</h2>
+      <ul class="mdc-list">
+        <li class="mdc-list-item" tabindex="0">
+          <span class="mdc-list-item__text">Broccoli Beef -------- 150 cal/serving</span>
+        </li>
+        <li class="mdc-list-item">
+          <span class="mdc-list-item__text"><i class="fas fa-drumstick-bite"></i>Chicken and Onion -------- 214 cal/serving</span>
+        </li>
+        <li class="mdc-list-item">
+          <span class="mdc-list-item__text">Tomato Beef Stew -------- 210 cal/serving</span>
+        </li>
+      </ul>
+      <!-- <div id="ingredients"></div> -->
+    </div>
+    <!--Animation Renderer-->
+    <script type="text/javascript" src="/javascripts/RLbodymovin.js"></script>
+    <!--AnimationJS script-->
+    <script type="text/javascript" src="/javascripts/RLindex.js"></script>
+  </body>
+</html>

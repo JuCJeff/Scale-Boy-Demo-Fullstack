@@ -1,0 +1,25 @@
+body {
+   font-family: roboto;
+   color:#282828;
+   margin: 0;
+   padding: 0;
+ }
+
+h1 {
+   position: absolute;
+   top: 55%;
+   transform: translateY(-50%);
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   text-align: center;
+}
+
+#avocado {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}

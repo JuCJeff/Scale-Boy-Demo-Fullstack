@@ -1,0 +1,22 @@
+div {
+  font-family: roboto;
+  text-align: center;
+  color: #282828;
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  position: absolute;
+  width: 100%;
+  top: 35%;
+}
+
+ul.mdc-list {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+li.mdc-list-item {
+
+}

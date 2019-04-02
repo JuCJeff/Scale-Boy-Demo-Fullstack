@@ -1,0 +1,38 @@
+div {
+  font-family: roboto;
+  text-align: center;
+  color: #282828;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  display: inline-block;
+}
+
+.parent {
+  position: absolute;
+  width: 50%;
+  top: 20%;
+  left: 20%;
+}
+
+ul.mdc-list {
+  clear: left;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#sheet {
+  width: 15%;
+  padding: 20px;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#check {
+  width:15%;
+  margin-left: 40px;
+  display: inline-block;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Scale Boy Nutritional Values Page</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+	/>
+	<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/NVstyle.css" />
+  </head>
+  <body>
+
+     <% include nav.ejs %>
+
+    <div class="parent">
+      <div id="sheet"></div>
+      <h2>Nutritional Values</h2>
+      <ul class="mdc-list">
+        <li class="mdc-list-item" tabindex="0">
+          <span class="mdc-list-item__text">Onions -------- 80 cal</span>
+        </li>
+        <li class="mdc-list-item">
+          <span class="mdc-list-item__text"><i class="fas fa-drumstick-bite"></i>Chicken -------- 240 cal</span>
+        </li>
+        <li class="mdc-list-item">
+          <span class="mdc-list-item__text"><i class="fas fa-cheese"></i>Mozzarella Cheese -------- 100 cal</span>
+        </li>
+        <li class="mdc-list-item">
+            <span class="mdc-list-item__text"><b>Total</b> -------- 480 cal</span>
+          </li>
+      </ul>
+    </div>
+    <!--Animation Renderer-->
+    <script type="text/javascript" src="/javascripts/NVbodymovin.js"></script>
+    <!--AnimationJS script-->
+    <script type="text/javascript" src="/javascripts/NVindex.js"></script>
+  </body>
+</html>

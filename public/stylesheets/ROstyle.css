@@ -1,0 +1,41 @@
+@import "@material/card/mdc-card";
+
+body {
+  font-family: roboto;
+  color: #282828;
+  margin: 0;
+  padding: 0;
+}
+
+.cardBox {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 15%;
+}
+
+#card1 {
+  width: 100%;
+  margin: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+#card2 {
+  width: 100%;
+  margin: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+#folder {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#noodles {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
