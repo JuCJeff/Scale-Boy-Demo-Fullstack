@@ -1,0 +1,18 @@
+body {
+    font-family: roboto;
+    font-size: xx-large;
+    color:#282828;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+

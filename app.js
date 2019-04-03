@@ -10,6 +10,8 @@ var recipeList = require('./routes/recipeList');
 var recipeDetails_ChickenAndBroccoli = require('./routes/recipeDetails_ChickenAndBroccoli');
 var ingredientsPrompt = require('./routes/ingredientsPrompt');
 var nutriVals = require('./routes/nutriVals');
+var sayHi = require('./routes/sayHi');
+
 
 
 
@@ -31,7 +33,7 @@ app.use('/recipeList', recipeList);
 app.use('/recipeDetails_ChickenAndBroccoli', recipeDetails_ChickenAndBroccoli);
 app.use('/ingredientsPrompt', ingredientsPrompt);
 app.use('/nutriVals', nutriVals);
-
+app.use('/sayHi', sayHi);
 
 
 

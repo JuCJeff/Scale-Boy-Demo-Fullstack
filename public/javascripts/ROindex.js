@@ -1,6 +1,6 @@
 var animation = bodymovin.loadAnimation({
     container: document.getElementById("folder"), // Required
-    path: "folder.json", // Required
+    path: "../images/folder.json", // Required
     renderer: "svg", // Required
     loop: false, // Optional
     autoplay: true, // Optional
@@ -9,7 +9,7 @@ var animation = bodymovin.loadAnimation({
 
 var animation2 = bodymovin.loadAnimation({
     container: document.getElementById("noodles"), // Required
-    path: "noodles.json", // Required
+    path: "../images/noodles.json", // Required
     renderer: "svg", // Required
     loop: false, // Optional
     autoplay: true, // Optional
