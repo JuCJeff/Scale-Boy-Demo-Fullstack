@@ -11,6 +11,7 @@ var recipeDetails_ChickenAndOnion= require('./routes/recipeDetails_ChickenAndOni
 var ingredientsPrompt = require('./routes/ingredientsPrompt');
 var nutriVals = require('./routes/nutriVals');
 var scalePage = require('./routes/scalePage');
+var portionPage = require('./routes/portionPage');
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use('/recipeDetails_ChickenAndOnion', recipeDetails_ChickenAndOnion);
 app.use('/ingredientsPrompt', ingredientsPrompt);
 app.use('/nutriVals', nutriVals);
 app.use('/scalePage', scalePage);
+app.use('/portionPage', portionPage);
 
 
 

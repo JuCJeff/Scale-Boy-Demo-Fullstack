@@ -15,6 +15,7 @@
 
 <script>
     function refresh() {
+    	stateChange();
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET", "https://scale-boy.firebaseio.com/load.json", true);
         xhttp.send();
@@ -23,12 +24,29 @@
             if (xhttp.readyState == 4 && xhttp.status == 200) {
                 var response = JSON.parse(xhttp.responseText);
                 var numberString = response.number;
-                    document.getElementById('data_container').innerHTML = numberString + "g";
+                document.getElementById('data_container').innerHTML = numberString + "g";
                 console.log(numberString);
             }
         }
         setTimeout(refresh, 1000);
     }
     refresh();
+    function stateChange(newState) {
+    setTimeout(function () {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "https://scale-boy.firebaseio.com/load.json", true);
+        xhttp.send();
+        xhttp.addEventListener("readystatechange", processRequest, false);
+        function processRequest(e) {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                var response = JSON.parse(xhttp.responseText);
+                var numberString = response.number;
+                if (parseInt(numberString) > 40) {
+                	window.location= "/portionPage";
+                }
+            }
+        }
+    }, 8000);
+}
 </script>
 </html>
