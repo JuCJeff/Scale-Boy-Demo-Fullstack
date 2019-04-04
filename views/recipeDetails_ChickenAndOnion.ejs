@@ -17,7 +17,7 @@
     <% include nav.ejs %>
 
     <div class="parent">
-      <h2>Chicken and Broccoli</h2>
+      <h2>Chicken and Onion</h2>
       <ul class="mdc-list">
         <li class="mdc-list-item" tabindex="0">
           <span class="mdc-list-item__text">Onions -------- 200-300g /serving</span>
@@ -35,5 +35,30 @@
     <script type="text/javascript" src="/javascripts/RDbodymovin.js"></script>
     <!--AnimationJS script-->
     <script type="text/javascript" src="/javascripts/RDindex.js"></script>
+    <script>
+      function nextPage() {
+        window.location= "/ingredientsPrompt";
+      }
+      function refresh() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "https://scale-boy.firebaseio.com/page.json", true);
+            xhttp.send();
+            xhttp.addEventListener("readystatechange", processRequest, false);
+        function processRequest(e) {
+              if (xhttp.readyState == 4 && xhttp.status == 200) {
+                var response = JSON.parse(xhttp.responseText);
+                var numberString = response.number;
+          if (numberString == "3") {
+            console.log("On current page");
+          } else if (numberString == "4") {
+            nextPage();
+          }
+                console.log(numberString);
+                }
+              }
+            setTimeout(refresh, 1000);
+          }
+          refresh();
+    </script>
   </body>
 </html>

@@ -35,5 +35,30 @@
 		<script type="text/javascript" src="../javascripts/RObodymovin.js"></script>
 		<!--AnimationJS script-->
 		<script type="text/javascript" src="../javascripts/ROindex.js"></script>
+		<script>
+			function nextPage() {
+				window.location= "/recipeList";
+			}
+			function refresh() {
+      			var xhttp = new XMLHttpRequest();
+      			xhttp.open("GET", "https://scale-boy.firebaseio.com/page.json", true);
+      			xhttp.send();
+      			xhttp.addEventListener("readystatechange", processRequest, false);
+				function processRequest(e) {
+        			if (xhttp.readyState == 4 && xhttp.status == 200) {
+          			var response = JSON.parse(xhttp.responseText);
+          			var numberString = response.number;
+					if (numberString == "1") {
+						console.log("On current page");
+					} else if (numberString == "2") {
+						nextPage();
+					}
+          			console.log(numberString);
+       	     		}
+       	    	}
+      			setTimeout(refresh, 1000);
+    			}
+    			refresh();
+		</script>
 	</body>
 </html>
