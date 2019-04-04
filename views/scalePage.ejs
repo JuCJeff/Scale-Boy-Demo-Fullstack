@@ -41,7 +41,7 @@
             if (xhttp.readyState == 4 && xhttp.status == 200) {
                 var response = JSON.parse(xhttp.responseText);
                 var numberString = response.number;
-                if (parseInt(numberString) > 40) {
+                if (parseInt(numberString) > 25) {
                 	window.location= "/portionPage";
                 }
             }

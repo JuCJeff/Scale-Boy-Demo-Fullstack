@@ -13,8 +13,14 @@
 </div>
 </body>
 
-<!-- <script>
+<script>
     function refresh() {
+        stateChange();
+        setTimeout(refresh, 1000);
+    }
+    refresh();
+    function stateChange(newState) {
+    setTimeout(function () {
         var xhttp = new XMLHttpRequest();
         xhttp.open("GET", "https://scale-boy.firebaseio.com/load.json", true);
         xhttp.send();
@@ -23,12 +29,12 @@
             if (xhttp.readyState == 4 && xhttp.status == 200) {
                 var response = JSON.parse(xhttp.responseText);
                 var numberString = response.number;
-                    document.getElementById('data_container').innerHTML = numberString + "g";
-                console.log(numberString);
+                if (parseInt(numberString) < 25) {
+                	window.location= "/scalePage";
+                }
             }
         }
-        setTimeout(refresh, 1000);
+    }, 5000);
     }
-    refresh();
-</script> -->
+</script>
 </html>
