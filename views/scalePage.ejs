@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/SPstyle.css">
+</head>
+<body>
+
+<% include nav.ejs %>
+
+<div id = "data_container">
+    <p>g</p>
+
+</div>
+</body>
+
+<script>
+    function refresh() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "https://scale-boy.firebaseio.com/load.json", true);
+        xhttp.send();
+        xhttp.addEventListener("readystatechange", processRequest, false);
+        function processRequest(e) {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                var response = JSON.parse(xhttp.responseText);
+                var numberString = response.number;
+                    document.getElementById('data_container').innerHTML = numberString + "g";
+                console.log(numberString);
+            }
+        }
+        setTimeout(refresh, 1000);
+    }
+    refresh();
+</script>
+</html>

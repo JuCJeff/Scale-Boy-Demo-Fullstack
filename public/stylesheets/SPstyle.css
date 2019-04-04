@@ -1,12 +1,7 @@
-span {
+div {
     font-family: roboto;
-    font-size: xx-large;
+    font-size: 600%;
     color:#282828;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -15,4 +10,3 @@ h1 {
     width: 100%;
     text-align: center;
 }
-
