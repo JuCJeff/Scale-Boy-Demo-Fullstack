@@ -10,3 +10,16 @@ div {
     width: 100%;
     text-align: center;
 }
+
+svg {
+    cursor: pointer;
+}
+
+#Eye_Close_Right {
+    visibility: hidden;
+}
+
+#Eye_Close_Left {
+    visibility: hidden;
+}
+
