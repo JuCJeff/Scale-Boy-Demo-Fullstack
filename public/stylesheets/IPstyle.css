@@ -9,12 +9,14 @@ div {
 .parent {
   position: absolute;
   width: 100%;
-  top: 20%;
+  top: 5%;
 }
 
 #ingredients {
-  width: 50%;
+  height: 30%;
+  width: 25%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 30px;
 }
+

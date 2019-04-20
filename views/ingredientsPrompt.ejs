@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Scale Boy Ingredients Prompting Page</title>
-		<link rel="stylesheet" type="text/css" href="/stylesheets/IPstyle.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/IPstyle.css"/>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/eyes.css"/>
 	</head>
 	<body>
 
@@ -13,34 +14,12 @@
 			<h2>Please put your ingredients on</h2>
 			<div id="ingredients"></div>
 		</div>
+		<div id="eyes"><p id="eye">Eyes</p></div>
+
+
 		<!--Animation Renderer-->
 		<script type="text/javascript" src="../javascripts/IPbodymovin.js"></script>
 		<!--AnimationJS script-->
 		<script type="text/javascript" src="../javascripts/IPindex.js"></script>
-		<script>
-	      function nextPage() {
-	        window.location= "/scalePage";
-	      }
-	      function refresh() {
-	            var xhttp = new XMLHttpRequest();
-	            xhttp.open("GET", "https://scale-boy.firebaseio.com/page.json", true);
-	            xhttp.send();
-	            xhttp.addEventListener("readystatechange", processRequest, false);
-	        function processRequest(e) {
-	              if (xhttp.readyState == 4 && xhttp.status == 200) {
-	                var response = JSON.parse(xhttp.responseText);
-	                var numberString = response.number;
-	          if (numberString == "4") {
-	            console.log("On current page");
-	          } else if (numberString == "5") {
-	            nextPage();
-	          }
-	                console.log(numberString);
-	                }
-	              }
-	            setTimeout(refresh, 1000);
-	          }
-	          refresh();
-    	</script>
 	</body>
 </html>

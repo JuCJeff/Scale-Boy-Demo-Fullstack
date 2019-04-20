@@ -11,10 +11,11 @@
 	/>
 	<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/NVstyle.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/eyes.css"/>
   </head>
   <body>
 
-     <% include nav.ejs %>
+     <a><% include nav.ejs %></a>
 
     <div class="parent">
       <div id="sheet"></div>
@@ -34,6 +35,7 @@
           </li>
       </ul>
     </div>
+    <div id="eyes"><p id="eye">Eyes</p></div>
     <!--Animation Renderer-->
     <script type="text/javascript" src="/javascripts/NVbodymovin.js"></script>
     <!--AnimationJS script-->
