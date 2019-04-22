@@ -5,6 +5,7 @@
 		<title>Scale Boy Recipe Option Page</title>
 		<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 		<link rel="stylesheet" type="text/css" href="/stylesheets/ROstyle.css">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/eyes.css">
 	</head>
 	<body>
 
@@ -14,7 +15,7 @@
 		<!--Card 1-->
 		<div class="mdc-card demo-card" id="card1">
 			<div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
-			  <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" id="folder"></div>
+			  <div id="folder"></div>
 			  <div class="demo-card__primary">
 				<h2 class="demo-card__title mdc-typography mdc-typography--headline6">Choose Saved Recipe</h2>
 			  </div>
@@ -24,41 +25,18 @@
 		  <!--Card 2-->
 		  <div class="mdc-card demo-card" id="card2">
 			<div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
-			  <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" id="noodles"></div>
+			  <div id="noodles"></div>
 			  <div class="demo-card__primary">
 				<h2 class="demo-card__title mdc-typography mdc-typography--headline6">Explore Online Recipe</h2>
 			  </div>
 			</div>
 		  </div>
 		</div>
+
+		<div id="eyes"><p id="eye">Eyes</p></div>
 		<!--Animation Renderer-->
 		<script type="text/javascript" src="../javascripts/RObodymovin.js"></script>
 		<!--AnimationJS script-->
 		<script type="text/javascript" src="../javascripts/ROindex.js"></script>
-		<script>
-			function nextPage() {
-				window.location= "/recipeList";
-			}
-			function refresh() {
-      			var xhttp = new XMLHttpRequest();
-      			xhttp.open("GET", "https://scale-boy.firebaseio.com/page.json", true);
-      			xhttp.send();
-      			xhttp.addEventListener("readystatechange", processRequest, false);
-				function processRequest(e) {
-        			if (xhttp.readyState == 4 && xhttp.status == 200) {
-          			var response = JSON.parse(xhttp.responseText);
-          			var numberString = response.number;
-					if (numberString == "1") {
-						console.log("On current page");
-					} else if (numberString == "2") {
-						nextPage();
-					}
-          			console.log(numberString);
-       	     		}
-       	    	}
-      			setTimeout(refresh, 1000);
-    			}
-    			refresh();
-		</script>
 	</body>
 </html>

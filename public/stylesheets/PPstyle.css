@@ -1,9 +1,21 @@
-div {
+#txt {
     font-family: roboto;
     font-size: 200%;
     color:#282828;
     position: absolute;
-    top: 50%;
+    top: 40%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+#txt2 {
+    font-family: roboto;
+    font-size: 200%;
+    color:#282828;
+    position: absolute;
+    top: 46%;
     transform: translateY(-50%);
     margin: 0;
     padding: 0;

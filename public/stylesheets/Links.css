@@ -1,0 +1,12 @@
+.divider {
+    color: white;
+}
+a:link {
+    color: white;
+}
+a:hover {
+    background-color: dimgrey;
+}
+a:visited {
+    color: white;
+}
