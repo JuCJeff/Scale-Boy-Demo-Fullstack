@@ -8,14 +8,16 @@
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
-	/>
-	<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="/stylesheets/NVstyle.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/eyes.css"/>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/eyes.css" />
   </head>
   <body>
-
-     <a><% include nav.ejs %></a>
+    <a><% include nav.ejs %></a>
 
     <div class="parent">
       <div id="sheet"></div>
@@ -25,17 +27,24 @@
           <span class="mdc-list-item__text">Onions -------- 80 cal</span>
         </li>
         <li class="mdc-list-item">
-          <span class="mdc-list-item__text"><i class="fas fa-drumstick-bite"></i>Chicken -------- 240 cal</span>
+          <span class="mdc-list-item__text"
+            ><i class="fas fa-drumstick-bite"></i>Chicken -------- 240 cal</span
+          >
         </li>
         <li class="mdc-list-item">
-          <span class="mdc-list-item__text"><i class="fas fa-cheese"></i>Mozzarella Cheese -------- 100 cal</span>
+          <span class="mdc-list-item__text"
+            ><i class="fas fa-cheese"></i>Mozzarella Cheese -------- 100
+            cal</span
+          >
         </li>
         <li class="mdc-list-item">
-            <span class="mdc-list-item__text"><b>Total</b> -------- 480 cal</span>
-          </li>
+          <span class="mdc-list-item__text"><b>Total</b> -------- 480 cal</span>
+        </li>
       </ul>
     </div>
-    <div id="eyes"><p id="eye">Eyes</p></div>
+
+    <% include eyes.ejs %>
+    
     <!--Animation Renderer-->
     <script type="text/javascript" src="/javascripts/NVbodymovin.js"></script>
     <!--AnimationJS script-->

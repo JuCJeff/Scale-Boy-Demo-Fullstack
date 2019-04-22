@@ -1,25 +1,24 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Scale Boy Ingredients Prompting Page</title>
-		<link rel="stylesheet" type="text/css" href="/stylesheets/IPstyle.css"/>
-		<link rel="stylesheet" type="text/css" href="/stylesheets/eyes.css"/>
-	</head>
-	<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Scale Boy Ingredients Prompting Page</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/IPstyle.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/eyes.css" />
+  </head>
+  <body>
+    <% include nav.ejs %>
 
-	    <% include nav.ejs %>
+    <div class="parent">
+      <h2>Please put your ingredients on</h2>
+      <div id="ingredients"></div>
+    </div>
 
-		<div class="parent">
-			<h2>Please put your ingredients on</h2>
-			<div id="ingredients"></div>
-		</div>
-		<div id="eyes"><p id="eye">Eyes</p></div>
+    <% include eyes.ejs %>
 
-
-		<!--Animation Renderer-->
-		<script type="text/javascript" src="../javascripts/IPbodymovin.js"></script>
-		<!--AnimationJS script-->
-		<script type="text/javascript" src="../javascripts/IPindex.js"></script>
-	</body>
+    <!--Animation Renderer-->
+    <script type="text/javascript" src="../javascripts/IPbodymovin.js"></script>
+    <!--AnimationJS script-->
+    <script type="text/javascript" src="../javascripts/IPindex.js"></script>
+  </body>
 </html>
