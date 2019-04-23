@@ -1,6 +1,10 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="../public/stylesheets/eyes.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../public/stylesheets/eyes.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <link
       rel="stylesheet"
@@ -123,6 +127,8 @@
             var numberString = response.number;
             if (parseInt(numberString) > 25) {
               window.location = "/portionPage";
+            } else if (parseInt(numberString) >= 10 || parseInt(numberString) <= 20) {
+              window.location = "/nutriVals";
             }
           }
         }
