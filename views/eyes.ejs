@@ -127,7 +127,7 @@
             var numberString = response.number;
             if (parseInt(numberString) > 25) {
               window.location = "/portionPage";
-            } else if (parseInt(numberString) >= 10 || parseInt(numberString) <= 20) {
+            } else if (parseInt(numberString) >= 10 && parseInt(numberString) <= 25) {
               window.location = "/nutriVals";
             }
           }
