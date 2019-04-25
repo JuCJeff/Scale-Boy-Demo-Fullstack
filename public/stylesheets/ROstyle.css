@@ -12,7 +12,7 @@ body {
   display: flex;
   height: 350px;
   width: 100%;
-  top: 5%;
+  top: -5%;
 }
 
 #card1 {

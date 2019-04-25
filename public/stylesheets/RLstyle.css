@@ -7,7 +7,6 @@ div {
 .parent {
   position: absolute;
   width: 100%;
-  top: 15%;
 }
 
 ul.mdc-list {
