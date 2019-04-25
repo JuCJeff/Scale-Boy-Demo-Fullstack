@@ -1,32 +1,56 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Scale Boy Welcome Page</title>
-		<link rel="stylesheet" type="text/css" href="/stylesheets/HPstyle.css">
-		<link rel="stylesheet" type="text/css" href="/stylesheets/eyes.css">
-	</head>
-	<body>
-	    <% include nav.ejs %>
-		<div id="parent">
-			<div id="avocado"></div>
-			<h1>Hi!<br/><span class="ityped"></span></h1>
-		</div>
-		
-		<% include eyes.ejs %>
+  <head>
+    <meta charset="utf-8" />
+    <title>Scale Boy Welcome Page</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/HPstyle.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/eyes.css" />
+  </head>
+  <body>
+    <% include nav.ejs %>
+    <div id="parent">
+      <div id="avocado"></div>
+      <h1>Hi!<br /><span class="ityped"></span></h1>
+    </div>
 
-		<!--Animation Renderer-->
-		<script type="text/javascript" src="../javascripts/HPbodymovin.js"></script>
-		<!--AnimationJS script-->
-		<script type="text/javascript" src="../javascripts/HPindex.js"></script>
-		<!--TypedJS script-->
-		<script type="text/javascript" src="../javascripts/HPityped.js"></script>
-			<script type="text/javascript">
-				window.ityped.init(document.querySelector('.ityped'),{
-					strings: ["I'm Scale Boy!", "How can I help you?"],
-					loop: false
-				});
-		</script>
+    <% include eyes.ejs %>
 
-	</body>
+    <!--Animation Renderer-->
+    <script type="text/javascript" src="../javascripts/HPbodymovin.js"></script>
+    <!--AnimationJS script-->
+    <script type="text/javascript" src="../javascripts/HPindex.js"></script>
+    <!--TypedJS script-->
+    <script type="text/javascript" src="../javascripts/HPityped.js"></script>
+    <script type="text/javascript">
+      window.ityped.init(document.querySelector(".ityped"), {
+        strings: ["I'm Scale Boy!", "How can I help you?"],
+        loop: false
+      });
+    </script>
+    <script>
+      function nextPage() {
+        window.location = "/recipeOption";
+      }
+      function refresh() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "https://scale-boy.firebaseio.com/page.json", true);
+        xhttp.send();
+        xhttp.addEventListener("readystatechange", processRequest, false);
+        function processRequest(e) {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+            var response = JSON.parse(xhttp.responseText);
+            var numberString = response.number;
+            if (numberString == "0") {
+              console.log("On current page");
+            } else if (numberString == "1") {
+              nextPage();
+            }
+            console.log(numberString);
+          }
+        }
+        setTimeout(refresh, 1000);
+      }
+      refresh();
+	</script>
+  </body>
 </html>
