@@ -19,11 +19,11 @@ This application is built through a NodeJS backend and currently connected to Ja
 ## Routes
 Currently we have the following pages active:
 
-http://localhost:3000/ Home Page
-http://localhost:3000/recipeOption Recipe Option Page
-http://localhost:3000/recipeList Recipe List Page
-http://localhost:3000/recipeDetails_ChickenAndOnion Recipe Detail Page
-http://localhost:3000/ingredientsPrompt Ingredients Prompt Page
-http://localhost:3000/scalePage Actual Scale Page (Need load cell integration for full functionality)
-http://localhost:3000/portionPage Portion Overweight Page
-http://localhost:3000/nutriVals Nutritional Values Page
+- http://localhost:3000/ Home Page
+- http://localhost:3000/recipeOption Recipe Option Page
+- http://localhost:3000/recipeList Recipe List Page
+- http://localhost:3000/recipeDetails_ChickenAndOnion Recipe Detail Page
+- http://localhost:3000/ingredientsPrompt Ingredients Prompt Page
+- http://localhost:3000/scalePage Actual Scale Page (Need load cell integration for full functionality)
+- http://localhost:3000/portionPage Portion Overweight Page
+- http://localhost:3000/nutriVals Nutritional Values Page
